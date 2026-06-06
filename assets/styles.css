@@ -150,8 +150,18 @@
   .snap .k{font-family:var(--fm);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--steel)}
   .snap .v{font-family:var(--fd);font-weight:600;font-size:1.2rem;margin-top:11px;letter-spacing:-.01em;line-height:1.25}
   .snap .v.ph{color:rgba(138,144,153,.55);font-style:italic;font-weight:500}
+  .snap .v.naics-mono{font-family:var(--fm);font-size:1.05rem;letter-spacing:.04em}
+  .snap-naics{margin-top:1px;border:1px solid var(--line);border-top:0;background:var(--paper-2);padding:28px 26px}
+  .snap-naics > .k{font-family:var(--fm);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--steel);margin-bottom:18px}
+  .naics-table{width:100%;border-collapse:collapse}
+  .naics-table th{font-family:var(--fm);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--steel);text-align:left;padding:0 16px 14px 0;border-bottom:1px solid var(--line);font-weight:500}
+  .naics-table th:last-child{padding-right:0}
+  .naics-table td{padding:13px 16px 13px 0;border-bottom:1px solid var(--line-soft);font-size:.94rem;line-height:1.45;vertical-align:top}
+  .naics-table td:first-child{font-family:var(--fm);font-size:.88rem;color:var(--ink-2);white-space:nowrap;width:1%}
+  .naics-table tr:last-child td{border-bottom:0}
+  .naics-table tr.primary td:first-child{color:var(--signal)}
+  .naics-tag{font-family:var(--fm);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--signal);background:var(--signal-soft);border:1px solid rgba(196,90,58,.28);padding:2px 6px;border-radius:2px;margin-left:8px;vertical-align:middle}
   .snap-actions{display:flex;flex-direction:column;align-items:flex-start;gap:18px;margin-top:32px}
-  .snap-note{font-family:var(--fm);font-size:11px;color:var(--ink-soft);letter-spacing:.02em;max-width:520px;line-height:1.5}
 
   /* ---- CONTACT ---- */
   .contact{display:grid;grid-template-columns:.95fr 1.05fr;gap:64px;margin-top:54px;align-items:start}
@@ -185,6 +195,7 @@
     .ap{border-right:0;border-bottom:1px solid var(--line);padding-right:0}
     .ap:nth-child(odd){padding-right:30px;border-right:1px solid var(--line)}
     .snap{grid-template-columns:1fr 1fr}
+    .naics-table td:first-child{white-space:normal}
     .sec-head{grid-template-columns:1fr;gap:18px}
     .foot-meta{width:100%;order:3}
   }
