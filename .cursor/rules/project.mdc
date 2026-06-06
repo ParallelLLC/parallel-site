@@ -1,0 +1,29 @@
+---
+description: Project conventions for the Parallel LLC marketing site
+alwaysApply: true
+---
+
+# Parallel LLC — site conventions
+
+This is a static marketing site. No framework, no build step, no bundler. Plain HTML + CSS + vanilla JS. Keep it that way unless explicitly asked to migrate.
+
+## Files
+- `index.html` — single page, semantic sections with `id`s (`#about`, `#mission`, `#approach`, `#capabilities`, `#snapshot`, `#contact`).
+- `assets/styles.css` — all styling. Design tokens are CSS custom properties in `:root` at the top. Reuse them; do not hardcode colors, fonts, or the max width.
+- `assets/main.js` — nav scroll state, mobile menu, IntersectionObserver scroll reveals, and the contact form mailto handler.
+
+## Design system
+- Fonts: Fraunces (display, serif), Hanken Grotesk (body), JetBrains Mono (labels/metadata). Loaded via Google Fonts in the `<head>`.
+- Palette: warm paper background, near-black ink, a single burnt-clay signal accent (`--signal`), steel-blue for secondary lines. One accent only — do not introduce new accent colors.
+- Aesthetic: institutional / editorial. Hairline rules, strict grid, generous whitespace, restrained motion. Avoid glows, heavy shadows, and generic startup gradients.
+- Section pattern: a `.sec-head` (numbered eyebrow + serif `h2.title` + short description), then the content block.
+
+## Editing rules
+- New content sections should follow the existing `.sec-head` + block pattern and use the design tokens.
+- Animations use the `.reveal` class + `transition-delay` inline for stagger. Keep motion subtle.
+- Accessibility: maintain semantic headings, label every form field, keep color contrast on the paper background.
+- Mobile: every new layout needs a matching rule in the existing `@media(max-width:980px)` and `@media(max-width:720px)` blocks.
+
+## Before deploy
+- `CONTACT_EMAIL` in `assets/main.js` must be set to the real inbox.
+- The `#snapshot` "To be added" fields (UEI, CAGE, NAICS) must be filled or the section removed.
