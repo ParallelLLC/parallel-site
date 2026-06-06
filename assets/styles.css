@@ -155,14 +155,14 @@
   .snap-naics{margin-top:1px;border:1px solid var(--line);border-top:0;background:var(--paper-2);padding:28px 26px}
   .snap-naics > .k{font-family:var(--fm);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--steel);margin-bottom:18px}
   .naics-list{display:flex;flex-direction:column}
-  .naics-row{display:grid;grid-template-columns:120px 1fr;gap:32px;padding:14px 0;border-bottom:1px solid var(--line-soft);align-items:start}
+  .naics-row{display:flex;gap:32px;padding:14px 0;border-bottom:1px solid var(--line-soft);align-items:flex-start}
   .naics-row:last-child{border-bottom:0}
   .naics-head{padding-top:0;padding-bottom:16px;border-bottom:1px solid var(--line)}
   .naics-head .naics-code,.naics-head .naics-title{font-family:var(--fm);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--steel)}
-  .naics-code{font-family:var(--fm);font-size:.88rem;color:var(--ink-2);line-height:1.4;display:flex;flex-direction:column;gap:8px}
+  .naics-code{flex:0 0 132px;min-width:132px;font-family:var(--fm);font-size:.88rem;color:var(--ink-2);line-height:1.4}
   .naics-row.primary .naics-code{color:var(--signal)}
-  .naics-title{font-size:.94rem;line-height:1.5;color:var(--ink-2)}
-  .naics-tag{font-family:var(--fm);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--signal);background:var(--signal-soft);border:1px solid rgba(196,90,58,.28);padding:3px 7px;border-radius:2px;width:fit-content}
+  .naics-title{flex:1;min-width:0;font-size:.94rem;line-height:1.5;color:var(--ink-2)}
+  .naics-tag{display:block;margin-top:8px;font-family:var(--fm);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--signal);background:var(--signal-soft);border:1px solid rgba(196,90,58,.28);padding:3px 7px;border-radius:2px;width:fit-content}
   .snap-actions{display:flex;flex-direction:column;align-items:flex-start;gap:18px;margin-top:32px}
 
   /* ---- CONTACT ---- */
@@ -198,7 +198,8 @@
     .ap:nth-child(odd){padding-right:30px;border-right:1px solid var(--line)}
     .snap{grid-template-columns:1fr 1fr}
     .snap .cellz.span-3{grid-column:span 1}
-    .naics-row{grid-template-columns:100px 1fr;gap:20px}
+    .naics-row{gap:20px}
+    .naics-code{flex-basis:100px;min-width:100px}
     .sec-head{grid-template-columns:1fr;gap:18px}
     .foot-meta{width:100%;order:3}
   }
@@ -215,7 +216,8 @@
     .cap-row{grid-template-columns:1fr;gap:18px}
     .snap{grid-template-columns:1fr}
     .snap .cellz.span-3{grid-column:span 1}
-    .naics-row{grid-template-columns:1fr;gap:6px}
+    .naics-row{flex-direction:column;gap:6px}
+    .naics-code{flex-basis:auto;min-width:0}
     .form-row{grid-template-columns:1fr}
     section.block{padding:88px 0}
     .foot{flex-direction:column;align-items:flex-start}
