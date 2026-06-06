@@ -17,12 +17,12 @@ const CONTACT_EMAIL = "info@parallelllc.com"; // change to your real inbox
   document.getElementById('contactForm').addEventListener('submit', (ev) => {
     ev.preventDefault();
     const f = ev.target;
-    const subject = encodeURIComponent("Inquiry — " + (f.org.value || f.name.value || "Parallel site"));
+    const subject = encodeURIComponent("Inquiry from " + (f.org.value || f.name.value || "Parallel site"));
     const body = encodeURIComponent(
       "Name: " + f.name.value + "\n" +
       "Email: " + f.email.value + "\n" +
-      "Organization: " + (f.org.value || "—") + "\n" +
-      "Role: " + (f.role.value || "—") + "\n\n" +
+      "Organization: " + (f.org.value || "n/a") + "\n" +
+      "Role: " + (f.role.value || "n/a") + "\n\n" +
       f.msg.value
     );
     location.href = "mailto:" + CONTACT_EMAIL + "?subject=" + subject + "&body=" + body;
