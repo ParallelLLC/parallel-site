@@ -152,6 +152,9 @@
   .product-cap-list li{font-size:.94rem;color:var(--ink-soft);line-height:1.58;padding:18px 0;border-bottom:1px solid var(--line-soft)}
   .product-cap-list li:last-child{border-bottom:0;padding-bottom:0}
   .product-cap-list li strong{color:var(--ink);font-weight:600;display:block;margin-bottom:6px}
+  .product-standards{padding:36px 36px 40px;border-top:1px solid var(--line-soft)}
+  .product-standards h4{font-family:var(--fd);font-weight:600;font-size:1.35rem;letter-spacing:-.02em;line-height:1.15;margin-bottom:16px}
+  .product-standards p{font-size:.96rem;color:var(--ink-soft);line-height:1.58;max-width:880px;margin:0}
   .product-foot{display:flex;align-items:center;justify-content:space-between;gap:32px;padding:28px 36px;border-top:1px solid var(--line-mid);background:var(--charcoal)}
   .product-foot p{font-size:.94rem;color:var(--ink-2);line-height:1.55;max-width:720px;margin:0}
 
@@ -280,6 +283,6 @@
     .form-row{grid-template-columns:1fr}
     section.block{padding:88px 0}
     .foot{flex-direction:column;align-items:flex-start}
-    .product-intro,.product-caps{padding:28px 24px 32px}
+    .product-intro,.product-caps,.product-standards{padding:28px 24px 32px}
     .product-foot{padding:24px}
   }
