@@ -1,5 +1,5 @@
 :root{
-    /* Black + charcoal base, blue on select sections, neon cyan signal */
+    /* Black base, white ink, logo blue signal (#2E8FE8) */
     --black:#000000;
     --void:#040404;
     --charcoal:#0A0A0C;
@@ -8,23 +8,23 @@
     --blue-deep:#061220;
     --blue-mid:#0C1E36;
     --blue-slate:#122640;
-    --ink:#F0F2F5;
+    --ink:#FFFFFF;
     --ink-2:#A1A1AA;
     --ink-soft:#71717A;
     --steel:#52525B;
     --steel-line:#71717A;
     --steel-bright:#A1A1AA;
-    --signal:#00E5FF;
-    --signal-bright:#7DF9FF;
-    --signal-soft:rgba(0,229,255,.08);
-    --signal-border:rgba(0,229,255,.4);
-    --signal-glow:rgba(0,229,255,.22);
+    --signal:#2E8FE8;
+    --signal-bright:#5AA8FF;
+    --signal-soft:rgba(46,143,232,.10);
+    --signal-border:rgba(46,143,232,.45);
+    --signal-glow:rgba(46,143,232,.22);
     --steel-soft-bg:rgba(255,255,255,.04);
     --steel-soft-border:rgba(255,255,255,.1);
     --line:rgba(255,255,255,.08);
     --line-mid:rgba(255,255,255,.12);
     --line-soft:rgba(255,255,255,.04);
-    --line-blue:rgba(0,229,255,.14);
+    --line-blue:rgba(46,143,232,.16);
     --fd:'Fraunces',Georgia,serif;
     --fb:'Hanken Grotesk',sans-serif;
     --fm:'JetBrains Mono',monospace;
@@ -43,8 +43,7 @@
   }
   a{color:inherit;text-decoration:none}
   ::selection{background:var(--signal);color:var(--black)}
-  /* Neon accent presets — swap --signal, --signal-soft, --signal-border, --signal-glow:
-     Cyan: #00E5FF (active)   Green: #39FF14   Amber: #FFB020 */
+  /* Signal accent tracks logo blue via --signal tokens above */
   .wrap{max-width:var(--max);margin:0 auto;padding:0 40px;position:relative;z-index:2}
 
   .eyebrow{font-family:var(--fm);font-size:11.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--steel);display:inline-flex;gap:12px;align-items:center}
@@ -54,19 +53,16 @@
   header{position:fixed;top:0;left:0;right:0;z-index:60;transition:background .35s,border-color .35s,backdrop-filter .35s;border-bottom:1px solid transparent}
   header.scrolled{background:rgba(0,0,0,.92);backdrop-filter:blur(12px) saturate(1.1);border-bottom:1px solid var(--line-mid)}
   .nav{display:flex;align-items:center;justify-content:space-between;height:80px}
-  .brand{display:flex;align-items:center;gap:13px;font-family:var(--fd);font-weight:600;font-size:23px;letter-spacing:-.015em}
-  .glyph{display:flex;flex-direction:column;gap:3.5px;width:20px}
-  .glyph i{height:2px;background:var(--ink);border-radius:2px;display:block;transition:width .35s ease}
-  .glyph i:nth-child(1){width:20px}
-  .glyph i:nth-child(2){width:11px;background:var(--signal)}
-  .glyph i:nth-child(3){width:16px}
-  .brand:hover .glyph i:nth-child(2){width:20px}
+  .brand{display:flex;align-items:center;flex-shrink:0}
+  .brand-logo{height:34px;width:auto;display:block;transition:opacity .25s}
+  .brand-logo-foot{height:28px}
+  .brand:hover .brand-logo{opacity:.88}
   .navlinks{display:flex;align-items:center;gap:36px}
   .navlinks a:not(.cta){font-size:14px;font-weight:500;color:var(--ink-2);position:relative}
   .navlinks a:not(.cta)::after{content:"";position:absolute;left:0;bottom:-6px;height:1px;width:0;background:var(--signal);transition:width .25s}
   .navlinks a:not(.cta):hover::after{width:100%}
-  .cta{font-family:var(--fm);font-size:12px;letter-spacing:.05em;text-transform:uppercase;background:var(--signal);color:var(--black);padding:12px 22px;border-radius:2px;transition:background .25s,border-color .25s,box-shadow .25s;border:1px solid var(--signal-border);box-shadow:0 0 16px var(--signal-glow)}
-  .cta:hover{background:var(--signal-bright);border-color:var(--signal-bright);color:var(--black);box-shadow:0 0 24px var(--signal-glow)}
+  .cta{font-family:var(--fm);font-size:12px;letter-spacing:.05em;text-transform:uppercase;background:var(--signal);color:var(--ink);padding:12px 22px;border-radius:2px;transition:background .25s,border-color .25s,box-shadow .25s;border:1px solid var(--signal-border);box-shadow:0 0 16px var(--signal-glow)}
+  .cta:hover{background:var(--signal-bright);border-color:var(--signal-bright);color:var(--ink);box-shadow:0 0 24px var(--signal-glow)}
   .menu-toggle{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:8px}
   .menu-toggle span{width:24px;height:2px;background:var(--ink)}
 
@@ -75,7 +71,7 @@
   .hero::before{
     content:"";position:absolute;inset:0;pointer-events:none;z-index:0;
     background:
-      radial-gradient(ellipse 70% 55% at 80% 0%, rgba(0,229,255,.12) 0%, transparent 58%),
+      radial-gradient(ellipse 70% 55% at 80% 0%, rgba(46,143,232,.14) 0%, transparent 58%),
       radial-gradient(ellipse 45% 35% at 10% 40%, rgba(255,255,255,.03) 0%, transparent 50%);
   }
   .hero-grid-bg{
@@ -239,7 +235,7 @@
   .field input,.field textarea{width:100%;background:transparent;border:0;border-bottom:1px solid var(--line);color:var(--ink);font-family:var(--fb);font-size:1.05rem;padding:10px 2px;transition:border-color .25s;resize:vertical}
   .field input:focus,.field textarea:focus{outline:none;border-bottom-color:var(--signal)}
   .field input::placeholder,.field textarea::placeholder{color:var(--ink-soft);opacity:.6}
-  form button{align-self:flex-start;font-family:var(--fm);font-size:12.5px;letter-spacing:.04em;text-transform:uppercase;background:var(--signal);color:var(--black);border:1px solid var(--signal-border);padding:16px 36px;border-radius:2px;cursor:pointer;transition:background .25s,box-shadow .25s;box-shadow:0 0 16px var(--signal-glow)}
+  form button{align-self:flex-start;font-family:var(--fm);font-size:12.5px;letter-spacing:.04em;text-transform:uppercase;background:var(--signal);color:var(--ink);border:1px solid var(--signal-border);padding:16px 36px;border-radius:2px;cursor:pointer;transition:background .25s,box-shadow .25s;box-shadow:0 0 16px var(--signal-glow)}
   form button:hover{background:var(--signal-bright);border-color:var(--signal-bright);box-shadow:0 0 24px var(--signal-glow)}
 
   /* ---- FOOTER ---- */
