@@ -147,6 +147,7 @@
   .product-audience{font-size:.98rem;color:var(--ink-soft);line-height:1.58;margin-bottom:18px}
   .product-intro p{font-size:.96rem;color:var(--ink-soft);line-height:1.58;margin-bottom:16px}
   .product-intro p:last-child{margin-bottom:0}
+  .product-intro p strong{color:var(--ink);font-weight:600}
   .product-caps{padding:40px 36px 44px}
   .product-caps-head{font-family:var(--fm);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--steel);margin-bottom:22px}
   .product-cap-list{list-style:none;display:flex;flex-direction:column;gap:0;border-top:1px solid var(--line-soft)}
@@ -156,8 +157,7 @@
   .product-standards{padding:36px 36px 40px;border-top:1px solid var(--line-soft)}
   .product-standards h4{font-family:var(--fd);font-weight:600;font-size:1.35rem;letter-spacing:-.02em;line-height:1.15;margin-bottom:16px}
   .product-standards p{font-size:.96rem;color:var(--ink-soft);line-height:1.58;max-width:880px;margin:0}
-  .product-standards-points{display:flex;flex-direction:column;gap:12px;margin:22px 0}
-  .product-standards-points p strong{color:var(--ink);font-weight:600}
+  .product-standards p.product-standards-close{margin-top:16px}
   .product-foot{display:flex;align-items:center;justify-content:space-between;gap:32px;padding:28px 36px;border-top:1px solid var(--line-mid);background:var(--charcoal)}
   .product-foot p{font-size:.94rem;color:var(--ink-2);line-height:1.55;max-width:720px;margin:0}
 
