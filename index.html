@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&family=JetBrains+Mono:wght@400;500&family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="assets/styles.css?v=20" />
+<link rel="stylesheet" href="assets/styles.css?v=21" />
 </head>
 <body>
 
@@ -93,35 +93,37 @@
     <div class="wrap">
       <div class="sec-head reveal">
         <div><span class="sec-no">02 / Products</span><h2 class="title">Products.</h2></div>
-        <div class="desc">Production software from Parallel. Deployed with the same governance, observability, and operational discipline as our client engagements.</div>
+        <div class="desc">Production software from Parallel. OBELUS is in pilot; ARBITER is in production. Same governance, observability, and operational discipline as our client engagements.</div>
       </div>
       <article class="product-card reveal" style="transition-delay:.08s">
         <div class="product-top">
           <div class="product-intro">
-            <span class="product-status">Deployed</span>
-            <h3 class="product-name">VECTOR</h3>
-            <p class="product-tagline">Threat-actor network intelligence and exposure monitoring</p>
-            <p>A commercial dual-use platform for mapping the actors, channels, and influence networks that shape the threat environment around defense, government, and critical-infrastructure organizations. VECTOR turns fragmented open-source, social, and dark web signals into one prioritized view: who matters, how they are connected, and where your organization and people are exposed.</p>
-            <p>Built for national security enterprises. Deployable in Parallel's managed environment or inside the customer's own enclave.</p>
-            <p>Adversaries organize in the open: messaging channels, emerging social platforms, and criminal leak sites. Defenders usually see those signals one source at a time, after the damage is done. Follower counts and raw volume describe what is loud, not what is load-bearing. VECTOR is built for the harder problem: identifying the structurally important actors and channels from incomplete public signal, and doing it in a way that survives audit.</p>
+            <span class="product-status product-status--pilot">In pilot</span>
+            <h3 class="product-name">OBELUS</h3>
+            <p class="product-tagline">Certified compression and trust for AI-consumed data</p>
+            <p>A dual-use platform for moving sensor and business data to the AI models that read it, with a signed statement of how much accuracy the move costs. OBELUS encodes imagery, tracks and documents for the model that consumes them, not for a person, and every result it carries arrives labelled with whether it can be trusted. Teams send less over constrained links and automate only on what is covered.</p>
+            <p>Built for national security and regulated enterprises. Deploys entirely inside the customer's own environment, on the streaming platforms they already run.</p>
+            <p>Models now read most sensor feeds before any analyst does. Links from aircraft, ships, ground stations and sensor sites are narrow, contested and often down, so teams compress. But no one can say how much accuracy a compression setting costs a given model, or whether a given result is still trustworthy. File size and image quality describe what a person sees, not what a model decides. OBELUS is built for the harder problem: putting a defensible bound on what compression costs the model, and carrying that trust with every result in a way that survives audit.</p>
           </div>
           <div class="product-caps">
             <div class="product-caps-head">What it does</div>
             <ul class="product-cap-list">
-              <li><strong>Identifies who matters, not who is loud.</strong> Ranks the actors and channels driving activity on the issues that matter to the mission, so teams concentrate on structurally important nodes rather than the ones with the largest surface metrics.</li>
-              <li><strong>Maps networks and amplification paths.</strong> Builds relationship graphs from observable interactions, surfaces actor clusters and communities, and traces content back to where it originated.</li>
-              <li><strong>Prioritizes by issue, with scores you can defend.</strong> Configurable issue taxonomies produce per-issue actor rankings from independent signals. Unobservable signals are marked unavailable rather than guessed, so every score holds up under review.</li>
-              <li><strong>Monitors exposure, then delivers into the stack you already run.</strong> Opt-in monitoring of organizations, domains, and personnel across collected sources, with API, CLI, and structured exports that drop into SOC, CTI, SIEM, and insider-risk workflows.</li>
+              <li><strong>Sends less, and says what it costs.</strong> Each operating point is certified for the customer's own model on the customer's own data. The certificate states the accuracy budget, what it covers and how long it is valid, so bandwidth savings come with a guarantee instead of a guess.</li>
+              <li><strong>Labels every result.</strong> Each result carries its trust status on the stream: certified, downgraded or unverified. Downstream systems automate on what is certified and pause on what is not.</li>
+              <li><strong>Fails safe.</strong> Expiry, revocation, inputs outside what was certified, and drift in the field all downgrade results immediately. Certificates can be revoked live. Nothing passes as trusted by default.</li>
+              <li><strong>Decodes the same everywhere.</strong> Results decode identically from the edge to the cloud, on Arm and x86, so any decision can be reproduced and audited after the fact.</li>
+              <li><strong>One picture across every source.</strong> An operator console shows every sensor and data source feeding the models, global, regional or local, with its trust status and what needs attention now.</li>
+              <li><strong>Fits the stack you already run.</strong> OBELUS runs on Kafka and Flink, with standard data contracts, so trust decisions happen inside the customer's existing streaming pipeline rather than in a separate system.</li>
             </ul>
           </div>
         </div>
         <div class="product-standards">
           <h4>Built for environments with dynamic constraints</h4>
-          <p>VECTOR is designed to the same standard as the rest of what we run: observable, recoverable, and documented so the system outlasts any one operator. Monitoring is consent-based. Collection is limited to public channels and licensed feeds. Leak-site intelligence comes from clearnet providers; VECTOR does not connect to Tor or retrieve leaked data. Decisions are recorded, outputs are auditable, and the architecture assumes scrutiny and accreditation from day one rather than retrofitting them later.</p>
+          <p>OBELUS is designed to the same standard as the rest of what we run: observable, recoverable, and documented so the system outlasts any one operator. It runs entirely inside the customer's boundary, and signing keys stay in the customer's own key management. Every certificate and trust record is signed, versioned and revocable, every result can be traced to the certificate that judged it, and link outages lose nothing and duplicate nothing. OBELUS is classified EAR99. The architecture assumes scrutiny and accreditation from day one rather than retrofitting them later.</p>
         </div>
         <div class="product-foot">
-          <p>Serves ISACs, Defense Industrial Base security teams, government CTI, and corporate security programs that need early warning and a single analytic picture across public threat channels.</p>
-          <a href="#contact" class="btn btn-solid">Request a demo</a>
+          <p>Serves ISR, maritime domain awareness and air surveillance programs across the Department of War, along with critical-infrastructure and enterprise teams that need to automate on model outputs from constrained or high-volume data.</p>
+          <a class="btn btn-solid" href="#contact">Request a demo</a>
         </div>
       </article>
       <article class="product-card reveal" style="transition-delay:.12s">
