@@ -159,6 +159,8 @@
   .product-standards h4{font-family:var(--fd);font-weight:600;font-size:1.35rem;letter-spacing:-.02em;line-height:1.15;margin-bottom:16px}
   .product-standards p{font-size:.96rem;color:var(--ink-soft);line-height:1.58;max-width:880px;margin:0}
   .product-standards p.product-standards-close{margin-top:16px}
+  .product-media{margin:28px 0 0;border:1px solid var(--line-mid);background:var(--black);overflow:hidden}
+  .product-media img{display:block;width:100%;height:auto;vertical-align:middle}
   .product-foot{display:flex;align-items:center;justify-content:space-between;gap:32px;padding:28px 36px;border-top:1px solid var(--line-mid);background:var(--charcoal)}
   .product-foot p{font-size:.94rem;color:var(--ink-2);line-height:1.55;max-width:720px;margin:0}
 
