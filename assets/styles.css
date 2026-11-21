@@ -137,13 +137,11 @@
   .badge-muted{color:var(--steel-bright);background:var(--steel-soft-bg);border-color:var(--steel-soft-border)}
 
   /* ---- PRODUCTS ---- */
-  #products{background:var(--charcoal);border-top:1px solid var(--line-mid)}
+  #technology,#products{background:var(--charcoal);border-top:1px solid var(--line-mid)}
   .product-card{margin-top:54px;border:1px solid var(--line-mid);background:var(--graphite)}
   .product-top{display:grid;grid-template-columns:1fr 1fr;gap:0}
   .product-intro{padding:40px 36px 44px;border-right:1px solid var(--line-soft)}
-  .product-status{font-family:var(--fm);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--signal);background:var(--signal-soft);border:1px solid var(--signal-border);padding:6px 12px;border-radius:2px;display:inline-block}
-  .product-status--pilot{color:var(--steel-bright);background:var(--steel-soft-bg);border-color:var(--steel-soft-border)}
-  .product-name{font-family:var(--fd);font-weight:600;font-size:clamp(2.2rem,4vw,3.2rem);letter-spacing:-.03em;line-height:1.02;margin:20px 0 10px}
+  .product-name{font-family:var(--fd);font-weight:600;font-size:clamp(2.2rem,4vw,3.2rem);letter-spacing:-.03em;line-height:1.02;margin:0 0 10px}
   .product-tagline{font-family:var(--fd);font-weight:500;font-size:1.22rem;color:var(--ink-2);letter-spacing:-.01em;line-height:1.35;margin-bottom:22px}
   .product-audience{font-size:.98rem;color:var(--ink-soft);line-height:1.58;margin-bottom:18px}
   .product-intro p{font-size:.96rem;color:var(--ink-soft);line-height:1.58;margin-bottom:16px}
@@ -159,8 +157,6 @@
   .product-standards h4{font-family:var(--fd);font-weight:600;font-size:1.35rem;letter-spacing:-.02em;line-height:1.15;margin-bottom:16px}
   .product-standards p{font-size:.96rem;color:var(--ink-soft);line-height:1.58;max-width:880px;margin:0}
   .product-standards p.product-standards-close{margin-top:16px}
-  .product-media{margin:28px 0 0;border:1px solid var(--line-mid);background:var(--black);overflow:hidden}
-  .product-media img{display:block;width:100%;height:auto;vertical-align:middle}
   .product-foot{display:flex;align-items:center;justify-content:space-between;gap:32px;padding:28px 36px;border-top:1px solid var(--line-mid);background:var(--charcoal)}
   .product-foot p{font-size:.94rem;color:var(--ink-2);line-height:1.55;max-width:720px;margin:0}
 
@@ -292,7 +288,7 @@
     .wrap{padding:0 24px}
     .menu-toggle{display:flex}
     .navlinks{position:fixed;inset:80px 0 auto 0;background:var(--charcoal);flex-direction:column;gap:0;max-height:0;overflow:hidden;transition:max-height .35s;border-bottom:1px solid var(--line)}
-    .navlinks.open{max-height:560px}
+    .navlinks.open{max-height:620px}
     .navlinks a{width:100%;padding:18px 24px;border-bottom:1px solid var(--line)}
     .navlinks a.cta{margin:16px 24px;text-align:center}
     .hero{padding:150px 0 0}
